@@ -1,21 +1,24 @@
 {
-    "AWSEBDockerrunVersion": 2,
-    "containerDefinitions": [{
-            "name": "node-app",
-            "image": "ecosyn/smalloffice-node-app",
-            "hostname": "node-app",
-            "essential": false
-        },
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "node-app",
+      "image": "ecosyn/rootrealestate-node-app",
+      "hostname": "node-app",
+      "essential": false
+    },
+    {
+      "name": "nginx",
+      "image": "ecosyn/rootrealestate-nginx",
+      "hostname": "nginx",
+      "essential": true,
+      "portMappings": [
         {
-            "name": "nginx",
-            "image": "ecosyn/smalloffice-nginx",
-            "hostname": "nginx",
-            "essential": true,
-            "portMappings": [{
-                "hostPort": 80,
-                "containerPort": 80
-            }],
-            "links": ["node-app"]
+          "hostPort": 80,
+          "containerPort": 80
         }
-    ]
+      ],
+      "links": ["node-app"]
+    }
+  ]
 }

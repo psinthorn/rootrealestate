@@ -18,15 +18,15 @@ script:
 
 # After success
 after_success:
-  - docker build -t ecosyn/smalloffice-node-app ./server
-  - docker build -t ecosyn/smalloffice-nginx ./nginx
+  - docker build -t ecosyn/rootreatestate-node-app ./server
+  - docker build -t ecosyn/rootrealestate-nginx ./nginx
 
   # Login to docker hub then push
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   # Push to docker hub
-  - docker push ecosyn/smalloffice-node-app
-  - docker push ecosyn/smalloffice-nginx
+  - docker push ecosyn/rootreatestate-node-app
+  - docker push ecosyn/rootrealestate-nginx
 # Deploy section
 # deploy:
 #
