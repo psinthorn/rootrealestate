@@ -1,48 +1,48 @@
 <div class="container">
-         <div class="row">
-            <div class="col s12 m12 l12">
-                
-                {{!-- {{> _msg}} --}}
+    <div class="row">
+        <div class="col s12 m12 l12">
 
-                    <h3>Login</h3>
+            {{!-- {{> _msg}} --}}
 
-                <div class="card-panel white" style="padding-left: 50px; padding-right: 50px">
+            <h3>Login</h3>
 
-
-                    
-                        <form action="/admin/login" method="post">
-
-                            <div class="row">
-
-
-                                <div class="input-field">
-                                    <input type="text" name="email" value="{{ email }}">
-                                    <label for="email">Email</label>
-                                </div>
-                                <div class="input-field">
-                                    <input type="password" name="password">
-                                    <label for="name">Password</label>
-                                </div>
-
-                            </div>
+            <div class="card-panel white" style="padding-left: 50px; padding-right: 50px">
 
 
 
-                            <div class="row">
-                                <input type="submit" value="Login" class="btn right">
-                            </div>
+                <form action="/admin/login" method="post">
 
-                        </form>
-                   
-                </div>
+                    <div class="row">
 
 
+                        <div class="input-field">
+                            <input type="text" name="email" value="{{ email }}">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" name="password">
+                            <label for="name">Password</label>
+                        </div>
 
+                    </div>
+
+
+
+                    <div class="row">
+                        <input type="submit" value="Login" class="btn amber darken-4 right">
+                    </div>
+
+                </form>
 
             </div>
 
-           
+
+
+
         </div>
-       
+
+
+    </div>
+
 
 </div>
